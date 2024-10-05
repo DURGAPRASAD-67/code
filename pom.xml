@@ -4,7 +4,6 @@
   <groupId>in.ashokit</groupId>
   <artifactId>01-maven-web-app</artifactId>
  <packaging>war</packaging>
-
 <build>
     <plugins>
         <plugin>
@@ -12,12 +11,12 @@
             <artifactId>maven-war-plugin</artifactId>
             <version>3.3.1</version>
             <configuration>
-                <!-- Ensure that the path to web.xml is correct -->
                 <webXml>src/main/webapp/WEB-INF/web.xml</webXml>
             </configuration>
         </plugin>
     </plugins>
 </build>
+
  
   <dependencies>
     <dependency>
