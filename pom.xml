@@ -3,10 +3,21 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>in.ashokit</groupId>
   <artifactId>01-maven-web-app</artifactId>
-  <packaging>war</packaging>
-  <version>3.0-RELEASE</version>
-  <name>01-maven-web-app</name>
-  <url>http://maven.apache.org</url>
+ <packaging>war</packaging>
+
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>3.3.1</version>
+            <configuration>
+                <!-- Ensure that the path to web.xml is correct -->
+                <webXml>src/main/webapp/WEB-INF/web.xml</webXml>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
  
   <dependencies>
     <dependency>
